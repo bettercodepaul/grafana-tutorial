@@ -9,8 +9,6 @@ volumes:
 services:
   prometheus:
     build: .
-    volumes:
-      - ./prometheus/:/etc/prometheus/
     command:
       - "--config.file=/etc/prometheus/prometheus.yml"
       - "--storage.tsdb.path=/prometheus"
